@@ -108,12 +108,60 @@ footer.foot{max-width:1080px;margin:0 auto 40px;padding:0 clamp(16px,4vw,32px);c
   .comp span{padding:0 6px;font-size:8pt}
   .two{gap:24px}
 }
+
+.reqblock{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;border:1.5px solid var(--red);border-radius:18px;padding:22px 26px;margin:28px 0 0}
+.reqblock h3{margin:0 0 6px;font-size:1.3rem;letter-spacing:-.02em}
+.reqblock p{margin:0;color:var(--grey);max-width:56ch}
+.reqbtn{font:inherit;font-weight:700;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);border-radius:999px;padding:0 22px;min-height:48px;cursor:pointer;white-space:nowrap}
+.reqbtn:hover{background:var(--red);border-color:var(--red);color:#fff}
+.earlier{margin:12px 0 0;color:var(--grey);font-size:.95rem}
+.modal{position:fixed;inset:0;z-index:88;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.on{display:flex}
+.modal .mbg{position:absolute;inset:0;background:rgba(0,0,0,.6);opacity:0;transition:opacity .3s}
+.modal.in .mbg{opacity:1}
+.modal .box{position:relative;width:min(520px,100%);background:var(--paper);color:var(--ink);border-radius:20px;padding:28px;box-shadow:0 60px 120px -40px rgba(0,0,0,.6);transform:translateY(18px);opacity:0;transition:transform .4s,opacity .3s}
+.modal.in .box{transform:none;opacity:1}
+.modal h3{margin:0 0 14px;font-size:1.5rem;letter-spacing:-.02em}
+.modal .x{position:absolute;right:14px;top:14px;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--ink);background:none;color:var(--ink);cursor:pointer;font-size:1.1rem}
+.field{display:grid;gap:6px;margin-bottom:12px}.field label{font-size:.85rem;font-weight:700}
+.field input,.field textarea{font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+@media (max-width:640px){.reqblock{grid-template-columns:1fr}}
+@media print{.reqblock,.modal{display:none!important}}
 </style>
 </head>
 <body>
 <div class="wipe" id="wipe" aria-hidden="true"><span>Nicole Irmo</span></div>
 <script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <div id="root"></div>
+<div class="modal" id="reqModal" role="dialog" aria-modal="true" aria-labelledby="rqT">
+  <div class="mbg" onclick="closeReq()"></div>
+  <div class="box">
+    <button class="x" type="button" onclick="closeReq()" aria-label="Close">×</button>
+    <h3 id="rqT">Request the full resume</h3>
+    <form id="rform">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <div class="field"><label for="rq-name">Your name</label><input id="rq-name" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="rq-email">Your email</label><input id="rq-email" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="rq-co">Company</label><input id="rq-co" name="company" autocomplete="organization"></div>
+      <div class="field"><label for="rq-why">What's it for? (one or two lines)</label><textarea id="rq-why" name="why" rows="3" required></textarea></div>
+      <button class="reqbtn" type="submit">Send my request</button>
+    </form>
+  </div>
+</div>
+<script>
+document.getElementById('rform').addEventListener('submit',async function(e){
+  e.preventDefault();var f=e.target;if(f.website.value)return;var btn=f.querySelector('button[type=submit]');btn.disabled=true;var was=btn.textContent;btn.textContent='Sending…';
+  var name=f.name.value.trim(),email=f.email.value.trim(),co=f.company.value.trim(),why=f.why.value.trim();var sub='Full resume request from '+name+(co?' · '+co:'');var sent=false;
+  try{var ctl=new AbortController();var t=setTimeout(function(){ctl.abort()},8000);
+    var r=await fetch('https://formsubmit.co/ajax/nicole.irmo@gmail.com',{method:'POST',signal:ctl.signal,headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:name,email:email,company:co,purpose:why,_subject:sub,_template:'table',_captcha:'false'})});
+    clearTimeout(t);if(r.ok){var j=await r.json().catch(function(){return {}});sent=!(j&&j.success===false)}}catch(err){}
+  btn.disabled=false;btn.textContent=was;
+  var box=f.closest('.box');
+  if(sent){f.hidden=true;box.querySelector('h3').textContent='Got it! Thanks for asking.';var p=document.createElement('p');p.textContent='I will send the full PDF to '+email+'.';box.appendChild(p);setTimeout(function(){closeReq();setTimeout(function(){f.hidden=false;f.reset();box.querySelector('h3').textContent='Request the full resume';p.remove()},400)},2600);return}
+  location.href='mailto:nicole.irmo@gmail.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent('Please send me the full resume.\n\nName: '+name+'\nEmail: '+email+'\nCompany: '+co+'\nWhat it is for: '+why);closeReq();
+});
+</script>
+
 <noscript><p style="padding:24px">This resume needs JavaScript to display. Email nicole.irmo@gmail.com for a copy.</p></noscript>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
@@ -127,11 +175,11 @@ const PORTFOLIO_URL = "/";
 /* ---------- resume data ---------- */
 const resume = {
   name: "Nicole Irmo",
-  title: "Vice President, Marketing",
+  title: "VP of Marketing, NorthShore Care Supply | Brand & DTC Ecommerce Leadership in Consumer Health & CPG",
   location: "Barrington, IL",
   email: "nicole.irmo@gmail.com",
   linkedin: "linkedin.com/in/nicoleirmo",
-  summary: "Brand builder who turns positioning into commercial results. Repositioned a 20-year-old product marketplace into a brand platform, built the company’s first marketing function beyond website support, and made storytelling the engine of a DTC medical supply business that grew from $28.6M to $43.8M in under three years. Builds the organization that sustains it: hired seven of nine team members, promoted three, retained the team across three and a half years with a single voluntary departure, and installed the planning, strategy, and reporting structure the function had never had. Now the most-cited brand in its category across AI-driven search, with record community engagement and the first owned advocacy programs in a market where customers rarely speak publicly.",
+  summary: "Brand builder who turns positioning into commercial results. Repositioned a 20-year-old product catalog into a brand platform, built the company's first marketing function beyond website support, and made storytelling the engine of a DTC medical supply business that grew 53% in under three years. Builds the organization that sustains it: hired seven of nine team members, promoted three, retained the team across three and a half years with a single voluntary departure, and installed the planning, strategy, and reporting structure the function had never had. Now the most-cited domain in its category across AI-driven search, with record community engagement and the first owned advocacy programs in a market where customers rarely speak publicly.",
   competencies: [
     "Brand Strategy & Category Positioning","Messaging Architecture & Brand Voice","Storytelling & Content Strategy",
     "Team Building, Coaching & Succession Planning","Organizational Design & Process Development",
@@ -141,32 +189,30 @@ const resume = {
   ],
   jobs: [
     {
-      company: "Northshore Care Supply", where: "Libertyville, IL", dates: "May 2023 – Present",
+      company: "NorthShore Care Supply", where: "Libertyville, IL", dates: "May 2023 – Present",
       role: "Vice President, Marketing (Jun 2024 – Present) · Director of Marketing (May 2023 – Jun 2024)",
-      lead: "Lead marketing and ecommerce for a direct-to-consumer medical supply and consumer packaged goods brand serving people with heavy bladder and bowel control challenges. Report to the founder and CEO. Own brand, messaging, website strategy, analytics, lifecycle, community, and partnerships across a nine-person organization spanning two consolidated functions.",
+      lead: "Lead marketing and ecommerce for a direct-to-consumer medical supply and consumer packaged goods brand serving people with heavy bladder and bowel control challenges. Report to the founder and CEO. Own brand, messaging, website strategy, analytics, lifecycle, community, and partnerships across a nine-person marketing and ecommerce team.",
       groups: [
         { title: "Brand & Storytelling", items: [
-          "Repositioned a two-decade-old product marketplace into a brand platform, standing up the company’s first true marketing function and establishing brand voice, messaging architecture, and funnel-stage messaging standards now applied across every channel.",
+          "Repositioned a two-decade-old product catalog into a brand platform, standing up the company's first true marketing function and establishing brand voice, messaging architecture, and funnel-stage messaging standards now applied across every channel.",
           "Built the content and community engine that carried a new category positioning to market, scaling production from ad hoc requests to 40+ published assets per month plus long-form authority hubs and ebooks.",
           "Made the brand the most-cited domain in its category across AI-driven search, at 1,291 citations versus 986 for the nearest competitor, after moving early on generative engine optimization and LLM visibility tracking.",
           "Grew organic search to a record 38,097 monthly sessions, up 32% year over year against an industry backdrop of organic search declining 2.5%; blog sessions rose 89% and blog revenue 104% year over year, with conversion on blog traffic improving from 3.1% to 15.3%.",
-          "Insourced social media, hiring and developing the function in-house and growing following from 35,400 to 56,600 across eight platforms, with engagement up 144% year over year to record levels and monthly follower growth of 4.5% against category benchmarks of 0.3% to 1.4%.",
+          "Insourced social media, hiring and developing the function in-house and growing following from 35,400 to 56,600 across eight platforms, with engagement up 144% year over year to record levels and monthly follower growth of 4.5% against platform benchmarks of 0.3% to 1.4%.",
           "Founded the brand ambassador, creator, and Hero Club programs, establishing the first owned advocacy engine in a category where customers rarely speak publicly."
         ]},
         { title: "Organization & Process", items: [
           "Hired 7 of 9 team members, promoted 3, and retained the team across three and a half years with a single voluntary departure.",
-          "Consolidated marketing and ecommerce into one nine-person organization following the ecommerce director’s departure, absorbing both functions mid-year without disruption to roadmap or revenue.",
-          "Installed the company’s first documented marketing plan, individual strategic initiatives with owned KPIs, quarterly strategy reviews, and cross-functional content and web experience hubs, replacing reactive request-driven workflows.",
-          "Hired the company’s first in-house video producer, creating internal production capability that now supplies creative across broadcast, CTV, paid social, YouTube, and organic channels."
+          "Consolidated marketing and ecommerce into one team under my leadership mid-year, closing the gap between creative and development without disruption to roadmap or revenue.",
+          "Installed the company's first documented marketing plan, individual strategic initiatives with owned KPIs, quarterly strategy reviews, and cross-functional content and web experience hubs, replacing reactive request-driven workflows.",
+          "Hired the company's first in-house video producer, creating internal production capability that now supplies creative across broadcast, CTV, paid social, YouTube, and organic channels."
         ]},
         { title: "Commercial Results", items: [
-          "Grew company revenue from $28.6M to $43.8M in under three years, up 53%, including 32% growth in 2025 and ten consecutive quarters of growth.",
-          "Delivered more than $10M in year-over-year ecommerce growth in FY2026 while absorbing 150%+ tariff exposure, a full product-line transition to U.S. manufacturing, and AI-driven search disruption.",
-          "Returned the direct channel to double-digit growth for the first time since 2018, at +12.5% year over year in Q3 2024, and delivered the company’s first $3M sales month.",
-          "Grew Amazon from $5.7M to $14.4M, up 154% and $8.7M in added revenue, by rebuilding catalog merchandising, content, and product page presentation across the marketplace.",
+          "Grew company revenue 53% in under three years, including 32% growth in 2025 and ten consecutive quarters of growth.",
+          "Returned the direct channel to double-digit growth for the first time since 2018, at +12.5% year over year in Q3 2024, and delivered the biggest sales month in company history at the time.",
           "Drove roughly 69% of attributed web revenue through owned channels, with organic search generating 2.3x the revenue of paid search.",
           "Delivered a full Optimizely replatform on time and on budget with no customer disruption, taking the project over mid-flight during a promotion and a vendor transition, then shipped a redesigned product page, homepage, navigation, and sample program plus a modular content-block system that moved page production in-house and cut time-to-launch from vendor sprint cycles to same day.",
-          "Directed paid social, paid YouTube, and Criteo at approximately 5x ROAS on conversion campaigns; built the case for and launched the company’s first linear TV and CTV tests, a $150K pilot program at a sub-$3 average CPM."
+          "Directed paid social, paid YouTube, and Criteo at approximately 5x ROAS on conversion campaigns; built the case for and launched the company's first linear TV and CTV tests, a pilot program at a sub-$3 average CPM."
         ]}
       ]
     },
@@ -175,7 +221,7 @@ const resume = {
       role: "Independent Marketing Consultant",
       items: [
         "Ran an independent consulting practice by choice following the acquisition of Focus Products, advising small and mid-sized businesses across financial services, real estate, healthcare, recreation, and business services on brand, positioning, and go-to-market strategy.",
-        "Led a full rebrand for a regional mortgage company including website, buyer guide, and a 60-piece marketing library for the sales organization.",
+        "Led a full rebrand for a regional mortgage company including website, buyer guide, and a 60-piece marketing library for the sales organization, earning two 2023 MAX! Awards from the Cape Fear Home Builders Association for print and web.",
         "Retained directly by Unilever to develop and execute a print media program across hospitality publications, owning strategy, rate negotiation, creative, and performance reporting.",
         "Built market research and go-to-market strategy for an outdoor recreation company entering the category, and moved a business services client to a digital-first sales model."
       ]
@@ -188,7 +234,7 @@ const resume = {
         "Led marketing for multiple multi-million-dollar hospitality and healthcare brands including Hookless, Protect-A-Bed, and Crescent.",
         "Integrated the Protect-A-Bed brand post-acquisition, redefining messaging across budgets, media buys, trade shows, and collateral; reduced marketing spend by $282K while increasing ad engagement 14% and growing sales year over year.",
         "Architected the Focus Hospitality brand, developing brand pillars and value proposition and redesigning logo, website, catalog, and trade show presence.",
-        "Built an omni-channel launch for the Wyndham Green shower curtain program across direct mail, email, and digital, adding $563K in year-over-year revenue.",
+        "Built an omnichannel launch for the Wyndham Green shower curtain program across direct mail, email, and digital, adding $563K in year-over-year revenue.",
         "Directed a direct mail program delivering 45%+ year-over-year sales growth at 2,800% ROAS, and a website redesign that grew traffic 30%.",
         "Managed a $550K annual budget and 30+ trade shows per year, partnering with Sales, Product, Operations, and Demand Planning."
       ]
@@ -197,14 +243,15 @@ const resume = {
       company: "Rosseto Serving Solutions", where: "Lincolnwood, IL", dates: "Aug 2014 – Sep 2015",
       role: "Marketing Manager",
       items: [
-        "Led all marketing as part of the senior leadership team, building the company’s first integrated strategy across email, digital, print, video, social, and trade shows.",
+        "Led all marketing as part of the senior leadership team, building the company's first integrated strategy across email, digital, print, video, social, and trade shows.",
         "Grew ecommerce sales 16% in the first six months and Amazon sales 49% through paid search and keyword targeting.",
         "Directed a website rebuild delivered on time and on budget, increasing online lead conversion 50%."
       ]
     }
   ],
+  earlier: "Earlier experience: digital marketing and small-business branding roles.",
   education: "Associate of Arts, Communication & Media Studies · Harper College, Palatine, IL",
-  technology: ["Optimizely (CMS & Experimentation)","Klaviyo","GA4","Domo","Monday.com","Sprout Social","Scrunch","Amazon Seller Central","Criteo","Meta Ads Manager","Figma","Adobe Creative Cloud","WordPress","Salesforce"]
+  technology: ["Optimizely (CMS & Experimentation)","Klaviyo","GA4","Domo","Monday.com","Sprout Social","Scrunch","Amazon Seller Central","Claude","Criteo","Meta Ads Manager","Figma","Adobe Creative Cloud","WordPress","Salesforce"]
 };
 
 /* ---------- components ---------- */
@@ -252,6 +299,9 @@ function ThemeToggle() {
   </button>`;
 }
 
+function openReq(){var m=document.getElementById('reqModal');m.classList.add('on');requestAnimationFrame(function(){m.classList.add('in')});setTimeout(function(){var f=m.querySelector('input:not([tabindex])');if(f)f.focus()},300)}
+window.openReq=openReq;function closeReq(){var m=document.getElementById('reqModal');m.classList.remove('in');setTimeout(function(){m.classList.remove('on')},300)}
+window.closeReq=closeReq;
 function Resume({ data }) {
   const hasPortfolio = PORTFOLIO_URL.indexOf("http") === 0;
   return html`
@@ -278,6 +328,7 @@ function Resume({ data }) {
           </div>
         </header>
 
+        <section className="reqblock"><div><h3>Want the full version?</h3><p>This version keeps a few confidential numbers under wraps. Tell me a little about yourself, and I'll send the full PDF.</p></div><button type="button" className="reqbtn" onClick=${openReq}>Request the full resume</button></section>
         <div className="body">
           <p className="summary">${data.summary}</p>
 
@@ -286,12 +337,14 @@ function Resume({ data }) {
 
           <h2>Professional experience</h2>
           ${data.jobs.map(j => html`<${Job} key=${j.company} job=${j} />`)}
+          ${data.earlier ? html`<p className="earlier">${data.earlier}</p>` : null}
 
           <div className="two">
             <section><h2>Education</h2><p style=${{margin:0}}>${data.education}</p></section>
             <section><h2>Technology</h2><div className="comp">${data.technology.map(t => html`<span key=${t}>${t}</span>`)}</div></section>
           </div>
         </div>
+        <section className="reqblock"><div><h3>Want the full version?</h3><p>This version keeps a few confidential numbers under wraps. Tell me a little about yourself, and I'll send the full PDF.</p></div><button type="button" className="reqbtn" onClick=${openReq}>Request the full resume</button></section>
       </main>
       <footer className="foot"><span>© 2026 Nicole Irmo</span><span>${data.email}</span></footer>
     <//>`;
