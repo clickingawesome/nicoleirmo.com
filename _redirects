@@ -2,3 +2,8 @@
 /cv /resume/ 301
 /results /#/results 301
 /contact /#/contact 301
+/work/hero-club/* /work/community/ 301
+/work/hotel-launch/* /work/focus-hospitality/ 301
+/work/direct-mail/* /work/focus-hospitality/ 301
+/work/marketplace/* /work/brand-platform/ 301
+/work/small-business/* /work/mortgage/ 301
