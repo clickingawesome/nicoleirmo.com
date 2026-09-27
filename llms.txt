@@ -9,7 +9,7 @@ Location: Barrington, Illinois. LinkedIn: https://www.linkedin.com/in/nicoleirmo
 ## Pages
 - [Home](https://nicoleirmo.com/): overview, results, selected work, recommendations
 - [About](https://nicoleirmo.com/about/): career and approach
-- [Résumé](https://nicoleirmo.com/resume/): full résumé, printable
+- [Resume](https://nicoleirmo.com/resume/): full resume, printable
 - [Insights](https://nicoleirmo.com/insights/): articles on brand, teams and growth
 - [Work](https://nicoleirmo.com/work/): case studies
 
@@ -17,7 +17,7 @@ Location: Barrington, Illinois. LinkedIn: https://www.linkedin.com/in/nicoleirmo
 - [How to market a product nobody wants to talk about](https://nicoleirmo.com/insights/marketing-a-category-nobody-talks-about/): Incontinence products are a category people buy quietly and never mention. That is not a marketing problem to work around. It is the whole brief.
 - [Amazon is a shelf, not a channel: how we grew it 154%](https://nicoleirmo.com/insights/amazon-is-a-shelf/): We did not buy the growth. We rebuilt the shelf: every listing, every image, every word a shopper reads before deciding.
 - [In AI search, the most-cited brand wins. Here is how we became it.](https://nicoleirmo.com/insights/most-cited-brand-wins/): Rankings measure where you appear. Citations measure whether you are the answer. In our category, that difference decided who wins the next five years of search.
-- [Hire for the puzzle: what I look for on a marketing team](https://nicoleirmo.com/insights/hire-for-the-puzzle/): I hired seven of the nine people on my team. The best of them share one trait that never shows up on a résumé.
+- [Hire for the puzzle: what I look for on a marketing team](https://nicoleirmo.com/insights/hire-for-the-puzzle/): I hired seven of the nine people on my team. The best of them share one trait that never shows up on a resume.
 - [What AI is actually good for on a small marketing team](https://nicoleirmo.com/insights/ai-on-a-small-marketing-team/): I lead AI adoption for a nine-person team. Here is what has earned its place, what has not, and the rule that keeps it honest.
 - [Seven of nine: building a marketing team that stays](https://nicoleirmo.com/insights/hire-seven-of-nine/): One voluntary departure in three and a half years is not luck. It is the result of a few unglamorous decisions, made early and kept.
 - [Story sells: turning a 20-year-old marketplace into a brand](https://nicoleirmo.com/insights/story-sells/): The company had two decades of product and a website. What it did not have was a story anyone could repeat.
