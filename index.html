@@ -298,7 +298,7 @@ body.dark{--mid:#555;--soft:#1C1C1C}
 .cta-row p{margin:0;max-width:44ch;font-size:1.1rem}
 
 /* contact */
-.contact{padding:clamp(40px,6vw,90px) 0 24px;position:relative;overflow:hidden}
+.contact{padding:clamp(40px,6vw,90px) 0 0;position:relative;overflow:hidden}
 .contact .ask{margin:0 0 10px;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.2vw,1.9rem);color:var(--muted)}
 .contact h2{margin:0;font-size:clamp(4rem,17vw,17rem)}
 .contact h2 .ln{display:block;overflow:hidden}.contact h2 .ln>span{display:inline-block}
@@ -308,9 +308,9 @@ body.dark{--mid:#555;--soft:#1C1C1C}
 .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:clamp(40px,6vw,90px);font-size:.85rem;color:var(--muted)}
 .foot .clock{font-variant-numeric:tabular-nums}
 @media (max-width:820px){.c-grid{grid-template-columns:1fr}.c-links{justify-content:flex-start}}
-.marq{overflow:hidden;border-top:1.5px solid var(--rule);margin-top:clamp(40px,6vw,80px);padding:18px 0}
+.marq{overflow:hidden;border-top:1.5px solid var(--rule);border-bottom:1.5px solid var(--rule);margin-top:clamp(40px,6vw,80px);padding:22px 0;display:flex;align-items:center}
 .marq .in{display:flex;align-items:center;gap:40px;width:max-content;will-change:transform}
-.marq span{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,3.4vw,3.2rem);white-space:nowrap;color:var(--muted)}
+.marq span{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,3.4vw,3.2rem);line-height:1;white-space:nowrap;color:var(--muted);display:inline-flex;align-items:center}
 .marq .amp{font-family:var(--sans);font-style:normal;font-weight:800;color:var(--red);font-variation-settings:"opsz" 96,"wdth" 80;letter-spacing:-.03em;font-size:clamp(1.6rem,3.4vw,3.2rem);line-height:1;display:inline-flex;align-items:center}
 
 
@@ -598,7 +598,16 @@ button,input,select,textarea{font:inherit;color:inherit}
 .how .serv h3{font-size:clamp(1.6rem,2.6vw,2.2rem)}
 .how .serv p{font-size:1.05rem}
 @media (max-width:820px){.how .serv{grid-template-columns:1fr}}
-.foot-nav{border-top:1.5px solid var(--rule);margin-top:clamp(40px,6vw,80px);padding-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;font-size:.92rem}
+.foot-nav{border-top:1.5px solid var(--rule);margin-top:clamp(40px,6vw,80px);padding-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(20px,3vw,48px);font-size:.92rem}
+.foot-brand{max-width:36ch}
+.foot-sig{height:60px;width:auto;display:block;margin-bottom:16px}
+body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .foot-sig{filter:invert(1)}}
+.foot-tag{margin:0 0 14px;color:var(--muted);line-height:1.5}
+.foot-contact{margin:0 0 14px;line-height:1.6}.foot-contact a{text-decoration:none;font-weight:600}.foot-contact a:hover{color:var(--red-ink)}
+.foot-social{margin:0;display:flex;gap:10px}.foot-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1.5px solid var(--rule);border-radius:50%;color:var(--fg);transition:background .25s,color .25s,border-color .25s}.foot-social a:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+@media (max-width:900px){.foot-nav{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1 / -1}}
+@media (max-width:520px){.foot-nav{grid-template-columns:1fr}}
 .foot-nav h4{margin:0 0 8px;font-size:.8rem;color:var(--muted)}
 .foot-nav a{display:block;text-decoration:none;padding:4px 0}
 .foot-nav a:hover{color:var(--red-ink)}
@@ -1052,6 +1061,12 @@ button,input,select,textarea{font:inherit;color:inherit}
 <!-- footer nav on every page -->
 <div class="wrap">
   <div class="foot-nav">
+    <div class="foot-brand">
+      <a href="#/" aria-label="Nicole Irmo, home"><img decoding="async" class="foot-sig" src="/assets/2b37d5ccaaeb.png" alt="Nicole Irmo" data-img="signature" width="900" height="382"></a>
+      <p class="foot-tag" data-bind="hero.tagline">Marketing executive who turns brand positioning into commercial results, and builds the teams that sustain it.</p>
+      <p class="foot-contact"><a href="mailto:nicole.irmo@gmail.com">nicole.irmo@gmail.com</a><br><span data-bind="hero.location">Barrington, Illinois</span></p>
+      <p class="foot-social"><a href="https://www.linkedin.com/in/nicoleirmo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico" viewBox="0 0 24 24" width="22" height="22"><path d="M4 9h4v11H4z"/><circle cx="6" cy="5" r="2"/><path d="M11 9h4v2a4 4 0 0 1 7 2.5V20h-4v-6a2 2 0 0 0-4 0v6h-3z"/></svg></a><a href="mailto:nicole.irmo@gmail.com" aria-label="Email"><svg class="ico" viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></p>
+    </div>
     <div><h4>Site</h4><a href="#/">Home</a><a href="#/work">Work</a><a href="#/results">Results</a><a href="#/about">About</a><a href="#/insights">Insights</a><a href="#/contact">Contact</a></div>
     <div><h4>Work by discipline</h4><a href="#/work?tag=Brand">Brand</a><a href="#/work?tag=Ecommerce">Ecommerce</a><a href="#/work?tag=Search">Search &amp; AI</a><a href="#/work?tag=Media">Media</a><a href="#/work?tag=Creative">Creative</a></div>
     <div><h4>Elsewhere</h4><a href="https://www.linkedin.com/in/nicoleirmo/" target="_blank" rel="noopener">LinkedIn</a><a href="/resume/">Résumé</a><a href="mailto:nicole.irmo@gmail.com">Email</a></div>
