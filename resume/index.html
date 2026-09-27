@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nicole Irmo · Résumé</title>
+<link rel="canonical" href="https://nicoleirmo.com/resume/">
+<meta property="og:title" content="Nicole Irmo · Résumé">
+<meta property="og:url" content="https://nicoleirmo.com/resume/">
+<meta property="og:image" content="https://nicoleirmo.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000;--paper:#fff;--red:#D0246F;--grey:#6F6F6F;--mid:#C9C9C9;--soft:#F1F1F1;--line:rgba(0,0,0,.16);
+  --sans:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--serif:"Newsreader",Georgia,serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#fff;--paper:#000;--grey:#A3A3A3;--mid:#4A4A4A;--soft:#111;--line:rgba(255,255,255,.18);color-scheme:dark}}
+:root[data-theme="dark"]{--ink:#fff;--paper:#000;--grey:#A3A3A3;--mid:#4A4A4A;--soft:#111;--line:rgba(255,255,255,.18);color-scheme:dark}
+/* page wipe */
+.wipe{position:fixed;inset:0;z-index:90;background:var(--ink);pointer-events:none;transform:translateY(0);transition:transform .8s cubic-bezier(.7,0,.2,1);display:flex;align-items:flex-end;padding:clamp(20px,4vw,64px)}
+.wipe span{color:var(--paper);font-weight:800;font-size:1.3rem;line-height:1;opacity:1;transition:opacity .25s}
+html.ready .wipe{transform:translateY(-101%)}
+html.ready .wipe span{opacity:0}
+html.leaving .wipe{transform:translateY(0);transition-duration:.65s}
+html.leaving .wipe span{opacity:1;transition-delay:.2s}
+html:not(.js) .wipe{display:none}
+@media (prefers-reduced-motion:reduce){.wipe{display:none}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-variation-settings:"opsz" 14;font-size:1rem;line-height:1.5;-webkit-font-smoothing:antialiased;transition:background-color .35s,color .35s}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+::selection{background:var(--red);color:#000}
+.disp{font-variation-settings:"opsz" 96,"wdth" 80;font-weight:800;letter-spacing:-.035em;line-height:.86}
+.bar{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1.5px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar-in{max-width:1080px;margin:0 auto;padding:10px clamp(16px,4vw,32px);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.bar a,.bar button{font-family:var(--sans);font-weight:700;font-size:.98rem;color:var(--ink);text-decoration:none;background:none;border:0;cursor:pointer;min-height:44px;display:inline-flex;align-items:center;gap:8px;padding:0}
+.bar a:hover{text-decoration:underline;text-underline-offset:4px}
+.bar-r{display:flex;align-items:center;gap:10px}
+.bar button{position:relative;isolation:isolate;overflow:hidden;border:1.5px solid var(--ink);border-radius:999px;padding:0 22px}
+.bar button::before{content:"";position:absolute;inset:0;background:var(--red);transform:translateY(101%);transition:transform .45s cubic-bezier(.2,.8,.2,1);z-index:-1}
+.bar button:hover{color:#fff;border-color:var(--red)}
+.bar button:hover::before{transform:translateY(0)}
+.bar .theme-btn{width:44px;padding:0;justify-content:center}
+.theme-btn .sun{display:none}
+:root[data-theme="dark"] .theme-btn .sun{display:block}:root[data-theme="dark"] .theme-btn .moon{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme]) .theme-btn .sun{display:block}:root:not([data-theme]) .theme-btn .moon{display:none}}
+.sheet{max-width:1080px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+header.top{padding:clamp(40px,7vw,90px) 0 clamp(20px,3vw,32px);border-bottom:1.5px solid var(--ink);display:grid;grid-template-columns:1fr auto;align-items:end;gap:16px 40px}
+header.top h1{margin:0;font-size:clamp(4.2rem,14vw,10rem)}
+header.top h1 i{font-style:normal;color:var(--red)}
+header.top .title{margin:18px 0 0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.1}
+.contact{display:flex;flex-direction:column;gap:4px;font-size:.95rem;text-align:right;color:var(--grey)}
+.contact a{color:var(--ink);text-underline-offset:3px;text-decoration-color:var(--line)}
+@media (max-width:720px){header.top{grid-template-columns:1fr}.contact{text-align:left}}
+.body{padding:clamp(24px,5vw,56px) 0 clamp(32px,5vw,64px)}
+.summary{font-size:clamp(1.15rem,1.9vw,1.4rem);line-height:1.4;margin:0;max-width:60ch;font-weight:500;letter-spacing:-.01em}
+h2{font-variation-settings:"opsz" 96,"wdth" 80;font-weight:800;letter-spacing:-.03em;font-size:clamp(2.2rem,4.2vw,3.4rem);line-height:.9;margin:clamp(40px,6vw,64px) 0 16px;padding-bottom:12px;border-bottom:1.5px solid var(--ink)}
+h2::after{content:".";color:var(--red)}
+.comp{display:flex;flex-wrap:wrap;gap:6px}
+.comp span{border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.9rem;line-height:1.3}
+.job{padding:24px 0;border-bottom:1.5px solid var(--line)}
+.job:last-child{border-bottom:0}
+.job-head{display:flex;justify-content:space-between;align-items:baseline;gap:6px 20px;flex-wrap:wrap}
+.job h3{margin:0;font-weight:800;font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.1;letter-spacing:-.02em}
+.job .where{display:block;color:var(--grey);font-size:.92rem;margin-top:4px}
+.dates{font-size:.92rem;font-weight:700;white-space:nowrap;color:var(--red)}
+.role{margin:10px 0 0;font-weight:600;font-size:1rem}
+.note{margin:4px 0 0;font-size:.95rem;color:var(--grey);font-family:var(--serif);font-style:italic;font-size:1.05rem}
+.lead{margin:10px 0 0;max-width:72ch}
+.group{margin-top:16px}
+.group h4{margin:0 0 4px;font-weight:700;font-size:.9rem;color:var(--grey)}
+ul{margin:6px 0 0;padding:0;list-style:none}
+li{margin:0;padding:9px 0;border-top:1px solid var(--line);max-width:80ch;display:grid;grid-template-columns:14px 1fr;gap:12px;align-items:start}
+li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);margin-top:.55em}
+.two{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(20px,4vw,48px)}
+@media (max-width:720px){.two{grid-template-columns:1fr}}
+footer.foot{max-width:1080px;margin:0 auto 40px;padding:0 clamp(16px,4vw,32px);color:var(--grey);font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1.5px solid var(--line);padding-top:16px}
+@media print{
+  @page{size:letter;margin:.4in .45in}
+  :root,:root[data-theme="dark"],:root:not([data-theme="light"]){--ink:#000;--paper:#fff;--grey:#5E5E5E;--mid:#BDBDBD;--soft:#fff;--line:rgba(0,0,0,.2);color-scheme:light}
+  html,body{background:#fff}
+  .bar,footer.foot,.wipe{display:none}
+  .sheet{margin:0;max-width:none;padding:0}
+  header.top{padding:0 0 8px}
+  header.top h1{font-size:34pt}
+  header.top .title{font-size:12pt;margin-top:6px}
+  .contact{font-size:8.5pt}
+  .body{padding:8px 0 0}
+  body{font-size:8.7pt;line-height:1.25}
+  .summary{font-size:9.6pt;line-height:1.3;max-width:none}
+  h2{font-size:14pt;margin:9px 0 4px;padding-bottom:3px}
+  .job{padding:4px 0}
+  .job h3{font-size:11.5pt}
+  .job .where,.dates,.note{font-size:8.5pt}
+  .role{font-size:9pt;margin-top:2px}
+  .lead{margin-top:2px;max-width:none}
+  .group{margin-top:3px}
+  .group h4{font-size:9pt;margin:0}
+  ul{margin-top:2px}
+  li{padding:2px 0;max-width:none;gap:8px}
+  li::before{width:5px;height:5px;margin-top:.45em}
+  .comp{gap:3px}
+  .comp span{padding:0 6px;font-size:8pt}
+  .two{gap:24px}
+}
+</style>
+</head>
+<body>
+<div class="wipe" id="wipe" aria-hidden="true"><span>Nicole Irmo</span></div>
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<div id="root"></div>
+<noscript><p style="padding:24px">This résumé needs JavaScript to display. Email nicole.irmo@gmail.com for a copy.</p></noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+(function(){
+const html = htm.bind(React.createElement);
+const PORTFOLIO_URL = "/";
+
+/* ---------- résumé data ---------- */
+const resume = {
+  name: "Nicole Irmo",
+  title: "Vice President, Marketing",
+  location: "Barrington, IL",
+  email: "nicole.irmo@gmail.com",
+  linkedin: "linkedin.com/in/nicoleirmo",
+  summary: "Brand builder who turns positioning into commercial results. Repositioned a 20-year-old product marketplace into a brand platform, built the company’s first marketing function beyond website support, and made storytelling the engine of a DTC medical supply business that grew from $28.6M to $43.8M in under three years. Builds the organization that sustains it: hired seven of nine team members, promoted three, retained the team across three and a half years with a single voluntary departure, and installed the planning, strategy, and reporting structure the function had never had. Now the most-cited brand in its category across AI-driven search, with record community engagement and the first owned advocacy programs in a market where customers rarely speak publicly.",
+  competencies: [
+    "Brand Strategy & Category Positioning","Messaging Architecture & Brand Voice","Storytelling & Content Strategy",
+    "Team Building, Coaching & Succession Planning","Organizational Design & Process Development",
+    "Marketing & Ecommerce Leadership","DTC & Marketplace Growth","Website Strategy & Customer Experience",
+    "Influencer, Creator & Community Programs","Lifecycle Marketing","Paid Social, Programmatic, YouTube, CTV & Linear TV",
+    "Organic Search, Content & Generative Engine Optimization","Agency & Vendor Management","Healthcare, Medical Supply & CPG Marketing"
+  ],
+  jobs: [
+    {
+      company: "Northshore Care Supply", where: "Libertyville, IL", dates: "May 2023 – Present",
+      role: "Vice President, Marketing (Jun 2024 – Present) · Director of Marketing (May 2023 – Jun 2024)",
+      lead: "Lead marketing and ecommerce for a direct-to-consumer medical supply and consumer packaged goods brand serving people with heavy bladder and bowel control challenges. Report to the founder and CEO. Own brand, messaging, website strategy, analytics, lifecycle, community, and partnerships across a nine-person organization spanning two consolidated functions.",
+      groups: [
+        { title: "Brand & Storytelling", items: [
+          "Repositioned a two-decade-old product marketplace into a brand platform, standing up the company’s first true marketing function and establishing brand voice, messaging architecture, and funnel-stage messaging standards now applied across every channel.",
+          "Built the content and community engine that carried a new category positioning to market, scaling production from ad hoc requests to 40+ published assets per month plus long-form authority hubs and ebooks.",
+          "Made the brand the most-cited domain in its category across AI-driven search, at 1,291 citations versus 986 for the nearest competitor, after moving early on generative engine optimization and LLM visibility tracking.",
+          "Grew organic search to a record 38,097 monthly sessions, up 32% year over year against an industry backdrop of organic search declining 2.5%; blog sessions rose 89% and blog revenue 104% year over year, with conversion on blog traffic improving from 3.1% to 15.3%.",
+          "Insourced social media, hiring and developing the function in-house and growing following from 35,400 to 56,600 across eight platforms, with engagement up 144% year over year to record levels and monthly follower growth of 4.5% against category benchmarks of 0.3% to 1.4%.",
+          "Founded the brand ambassador, creator, and Hero Club programs, establishing the first owned advocacy engine in a category where customers rarely speak publicly."
+        ]},
+        { title: "Organization & Process", items: [
+          "Hired 7 of 9 team members, promoted 3, and retained the team across three and a half years with a single voluntary departure.",
+          "Consolidated marketing and ecommerce into one nine-person organization following the ecommerce director’s departure, absorbing both functions mid-year without disruption to roadmap or revenue.",
+          "Installed the company’s first documented marketing plan, individual strategic initiatives with owned KPIs, quarterly strategy reviews, and cross-functional content and web experience hubs, replacing reactive request-driven workflows.",
+          "Hired the company’s first in-house video producer, creating internal production capability that now supplies creative across broadcast, CTV, paid social, YouTube, and organic channels."
+        ]},
+        { title: "Commercial Results", items: [
+          "Grew company revenue from $28.6M to $43.8M in under three years, up 53%, including 32% growth in 2025 and ten consecutive quarters of growth.",
+          "Delivered more than $10M in year-over-year ecommerce growth in FY2026 while absorbing 150%+ tariff exposure, a full product-line transition to U.S. manufacturing, and AI-driven search disruption.",
+          "Returned the direct channel to double-digit growth for the first time since 2018, at +12.5% year over year in Q3 2024, and delivered the company’s first $3M sales month.",
+          "Grew Amazon from $5.7M to $14.4M, up 154% and $8.7M in added revenue, by rebuilding catalog merchandising, content, and product page presentation across the marketplace.",
+          "Drove roughly 69% of attributed web revenue through owned channels, with organic search generating 2.3x the revenue of paid search.",
+          "Delivered a full Optimizely replatform on time and on budget with no customer disruption, taking the project over mid-flight during a promotion and a vendor transition, then shipped a redesigned product page, homepage, navigation, and sample program plus a modular content-block system that moved page production in-house and cut time-to-launch from vendor sprint cycles to same day.",
+          "Directed paid social, paid YouTube, and Criteo at approximately 5x ROAS on conversion campaigns; built the case for and launched the company’s first linear TV and CTV tests, a $150K pilot program at a sub-$3 average CPM."
+        ]}
+      ]
+    },
+    {
+      company: "Clicking Awesome", where: "Wilmington, NC", dates: "Jan 2021 – May 2023",
+      role: "Independent Marketing Consultant",
+      items: [
+        "Ran an independent consulting practice by choice following the acquisition of Focus Products, advising small and mid-sized businesses across financial services, real estate, healthcare, recreation, and business services on brand, positioning, and go-to-market strategy.",
+        "Led a full rebrand for a regional mortgage company including website, buyer guide, and a 60-piece marketing library for the sales organization.",
+        "Retained directly by Unilever to develop and execute a print media program across hospitality publications, owning strategy, rate negotiation, creative, and performance reporting.",
+        "Built market research and go-to-market strategy for an outdoor recreation company entering the category, and moved a business services client to a digital-first sales model."
+      ]
+    },
+    {
+      company: "Focus Products Group International, LLC", where: "Lincolnshire, IL", dates: "Sep 2015 – Apr 2021",
+      role: "Marketing Director (2019 – Apr 2021) · Marketing Manager (Sep 2015 – 2019)",
+      note: "Acquired by Hollander Sleep Products in 2021 through parent company SureFit Home Decor.",
+      items: [
+        "Led marketing for multiple multi-million-dollar hospitality and healthcare brands including Hookless, Protect-A-Bed, and Crescent.",
+        "Integrated the Protect-A-Bed brand post-acquisition, redefining messaging across budgets, media buys, trade shows, and collateral; reduced marketing spend by $282K while increasing ad engagement 14% and growing sales year over year.",
+        "Architected the Focus Hospitality brand, developing brand pillars and value proposition and redesigning logo, website, catalog, and trade show presence.",
+        "Built an omni-channel launch for the Wyndham Green shower curtain program across direct mail, email, and digital, adding $563K in year-over-year revenue.",
+        "Directed a direct mail program delivering 45%+ year-over-year sales growth at 2,800% ROAS, and a website redesign that grew traffic 30%.",
+        "Managed a $550K annual budget and 30+ trade shows per year, partnering with Sales, Product, Operations, and Demand Planning."
+      ]
+    },
+    {
+      company: "Rosseto Serving Solutions", where: "Lincolnwood, IL", dates: "Aug 2014 – Sep 2015",
+      role: "Marketing Manager",
+      items: [
+        "Led all marketing as part of the senior leadership team, building the company’s first integrated strategy across email, digital, print, video, social, and trade shows.",
+        "Grew ecommerce sales 16% in the first six months and Amazon sales 49% through paid search and keyword targeting.",
+        "Directed a website rebuild delivered on time and on budget, increasing online lead conversion 50%."
+      ]
+    }
+  ],
+  education: "Associate of Arts, Communication & Media Studies · Harper College, Palatine, IL",
+  technology: ["Optimizely (CMS & Experimentation)","Klaviyo","GA4","Domo","Monday.com","Sprout Social","Scrunch","Amazon Seller Central","Criteo","Meta Ads Manager","Figma","Adobe Creative Cloud","WordPress","Salesforce"]
+};
+
+/* ---------- components ---------- */
+function Bullets({ items }) {
+  return html`<ul>${items.map((t, i) => html`<li key=${i}>${t}</li>`)}</ul>`;
+}
+
+function Job({ job }) {
+  return html`
+    <article className="job">
+      <div className="job-head">
+        <div><h3>${job.company}</h3><span className="where">${job.where}</span></div>
+        <span className="dates">${job.dates}</span>
+      </div>
+      <p className="role">${job.role}</p>
+      ${job.note && html`<p className="note">${job.note}</p>`}
+      ${job.lead && html`<p className="lead">${job.lead}</p>`}
+      ${job.groups
+        ? job.groups.map(g => html`<div className="group" key=${g.title}><h4>${g.title}</h4><${Bullets} items=${g.items} /></div>`)
+        : html`<${Bullets} items=${job.items} />`}
+    </article>`;
+}
+
+
+function ThemeToggle() {
+  const root = document.documentElement;
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const read = () => { const t = root.getAttribute("data-theme"); return t ? t === "dark" : mq.matches; };
+  const [dark, setDark] = React.useState(read);
+  React.useEffect(() => {
+    const on = () => setDark(read());
+    if (mq.addEventListener) mq.addEventListener("change", on);
+    return () => { if (mq.removeEventListener) mq.removeEventListener("change", on); };
+  }, []);
+  const flip = () => {
+    const next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    setDark(!dark);
+  };
+  return html`<button type="button" className="theme-btn" onClick=${flip}
+      aria-label=${dark ? "Switch to light mode" : "Switch to dark mode"} aria-pressed=${String(dark)}>
+    <svg className="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    <svg className="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+  </button>`;
+}
+
+function Resume({ data }) {
+  const hasPortfolio = PORTFOLIO_URL.indexOf("http") === 0;
+  return html`
+    <${React.Fragment}>
+      <div className="bar"><div className="bar-in">
+        ${hasPortfolio
+          ? html`<a href=${PORTFOLIO_URL}>
+              <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M11 3L5 9l6 6"/></svg>
+              Back to portfolio</a>`
+          : html`<span></span>`}
+        <div className="bar-r">
+          <${ThemeToggle} />
+          <button type="button" onClick=${() => window.print()}>Print or save as PDF</button>
+        </div>
+      </div></div>
+
+      <main className="sheet">
+        <header className="top">
+          <div><h1 className="disp">Nicole Irmo<i>.</i></h1><p className="title">${data.title}</p></div>
+          <div className="contact">
+            <span>${data.location}</span>
+            <a href=${"mailto:" + data.email}>${data.email}</a>
+            <a href=${"https://www." + data.linkedin + "/"} target="_blank" rel="noopener">${data.linkedin}</a>
+          </div>
+        </header>
+
+        <div className="body">
+          <p className="summary">${data.summary}</p>
+
+          <h2>Core competencies</h2>
+          <div className="comp">${data.competencies.map(c => html`<span key=${c}>${c}</span>`)}</div>
+
+          <h2>Professional experience</h2>
+          ${data.jobs.map(j => html`<${Job} key=${j.company} job=${j} />`)}
+
+          <div className="two">
+            <section><h2>Education</h2><p style=${{margin:0}}>${data.education}</p></section>
+            <section><h2>Technology</h2><div className="comp">${data.technology.map(t => html`<span key=${t}>${t}</span>`)}</div></section>
+          </div>
+        </div>
+      </main>
+      <footer className="foot"><span>© 2026 Nicole Irmo</span><span>${data.email}</span></footer>
+    <//>`;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(html`<${Resume} data=${resume} />`);
+requestAnimationFrame(function(){requestAnimationFrame(function(){document.documentElement.classList.add("ready")})});
+addEventListener("pageshow",function(e){if(e.persisted){document.documentElement.classList.remove("leaving");document.documentElement.classList.add("ready")}});
+document.addEventListener("click",function(e){
+  var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;
+  var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce||a.target==="_blank"||/^mailto:/.test(a.href)||e.metaKey||e.ctrlKey||e.shiftKey)return;
+  if(a.href.indexOf(PORTFOLIO_URL)!==0)return;
+  e.preventDefault();var to=a.href;
+  document.documentElement.classList.remove("ready");document.documentElement.classList.add("leaving");
+  setTimeout(function(){location.href=to},680);
+});
+})();
+</script>
+</body>
+</html>
