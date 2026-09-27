@@ -1,7 +1,3 @@
-[build]
-  publish = "."
-  command = ""
-
 [[headers]]
   for = "/*"
   [headers.values]
