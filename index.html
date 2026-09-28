@@ -669,6 +669,14 @@ button,input,select,textarea{font:inherit;color:inherit}
 .foot-nav h4{margin:0 0 8px;font-size:.8rem;color:var(--muted)}
 .foot-nav a{display:block;text-decoration:none;padding:4px 0}
 .foot-nav a:hover{color:var(--red-ink)}
+
+/* mobile fixes */
+.foot-nav .foot-social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1.5px solid var(--rule);border-radius:50%}
+.foot-nav .foot-social a svg{display:block;width:20px;height:20px}
+@media (max-width:860px){
+  .hero .frame{grid-column:1;grid-row:auto;justify-self:center;align-self:start;width:min(100%,380px);height:auto;max-height:none;margin:12px auto 0}
+  .card .img img{object-fit:cover;object-position:50% 50%}
+}
 </style>
 </head>
 <body>
@@ -1221,7 +1229,7 @@ button,input,select,textarea{font:inherit;color:inherit}
       <a href="#/" aria-label="Nicole Irmo, home"><img decoding="async" class="foot-sig sig-light" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIwIC0xMDA3IDgyOSAxMDM3IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik5pY29sZSBJcm1vIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEsLTEpIj48cGF0aCBkPSJNMzYgMFYyOTlWNTI4SDE3M1YzMTNIMTgxUTE4NyAzOTEgMjA3LjAgNDQxLjVRMjI3IDQ5MiAyNjQuMCA1MTcuMFEzMDEgNTQyIDM1OCA1NDJRNDQ0IDU0MiA0ODcuNSA0ODUuMFE1MzEgNDI4IDUzMSAzMTVWMEgzNjlWMjk0UTM2OSAzNDggMzUyLjUgMzc1LjBRMzM2IDQwMiAzMDAgNDAyUTI3MCA0MDIgMjQ3LjAgMzgxLjBRMjI0IDM2MCAyMTEuMCAzMTMuMFExOTggMjY2IDE5OCAxODdWMFoiIGZpbGw9IiMwMDAiLz48cGF0aCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzIsMCkiIGQ9Ik0zNiAwVjUyOEgxOThWMFoiIGZpbGw9IiMwMDAiLz48L2c+PGNpcmNsZSBjeD0iNjQ5IiBjeT0iLTgwNyIgcj0iMTcwIiBmaWxsPSIjRjI0MDhGIi8+PC9zdmc+" alt="Nicole Irmo" width="740" height="1037"><img decoding="async" class="foot-sig sig-dark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIwIC0xMDA3IDgyOSAxMDM3IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik5pY29sZSBJcm1vIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEsLTEpIj48cGF0aCBkPSJNMzYgMFYyOTlWNTI4SDE3M1YzMTNIMTgxUTE4NyAzOTEgMjA3LjAgNDQxLjVRMjI3IDQ5MiAyNjQuMCA1MTcuMFEzMDEgNTQyIDM1OCA1NDJRNDQ0IDU0MiA0ODcuNSA0ODUuMFE1MzEgNDI4IDUzMSAzMTVWMEgzNjlWMjk0UTM2OSAzNDggMzUyLjUgMzc1LjBRMzM2IDQwMiAzMDAgNDAyUTI3MCA0MDIgMjQ3LjAgMzgxLjBRMjI0IDM2MCAyMTEuMCAzMTMuMFExOTggMjY2IDE5OCAxODdWMFoiIGZpbGw9IiNmZmYiLz48cGF0aCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzIsMCkiIGQ9Ik0zNiAwVjUyOEgxOThWMFoiIGZpbGw9IiNmZmYiLz48L2c+PGNpcmNsZSBjeD0iNjQ5IiBjeT0iLTgwNyIgcj0iMTcwIiBmaWxsPSIjRjI0MDhGIi8+PC9zdmc+" alt="" aria-hidden="true" width="740" height="1037"></a>
       <p class="foot-tag" data-bind="hero.tagline">Marketing executive who turns brand positioning into commercial results, and builds the teams that sustain it.</p>
       <p class="foot-contact"><a href="mailto:nicole.irmo@gmail.com">nicole.irmo@gmail.com</a><br><span data-bind="hero.location">Barrington, Illinois</span></p>
-      <p class="foot-social"><a href="https://www.linkedin.com/in/nicoleirmo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico" viewBox="0 0 24 24" width="22" height="22"><path d="M4 9h4v11H4z"/><circle cx="6" cy="5" r="2"/><path d="M11 9h4v2a4 4 0 0 1 7 2.5V20h-4v-6a2 2 0 0 0-4 0v6h-3z"/></svg></a><a href="mailto:nicole.irmo@gmail.com" aria-label="Email"><svg class="ico" viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></p>
+      <p class="foot-social"><a href="https://www.linkedin.com/in/nicoleirmo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M5.2 8.6h3.1v10H5.2zM6.75 3.9a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM10.3 8.6h3v1.4h.05c.42-.8 1.44-1.64 2.97-1.64 3.17 0 3.76 2.09 3.76 4.8v5.44h-3.1v-4.82c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.9h-3.1z"/></svg></a><a href="mailto:nicole.irmo@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></a></p>
     </div>
     <div><h4>Site</h4><a href="#/">Home</a><a href="#/work">Work</a><a href="#/results">Results</a><a href="#/about">About</a><a href="#/insights">Insights</a><a href="#/contact">Contact</a></div>
     <div><h4>Work by discipline</h4><a href="#/work?tag=Brand">Brand</a><a href="#/work?tag=Team">Team</a><a href="#/work?tag=Community">Community</a><a href="#/work?tag=Ecommerce">Ecommerce</a><a href="#/work?tag=Search">Search &amp; AI</a><a href="#/work?tag=Media">Media</a><a href="#/work?tag=Creative">Creative</a></div>
