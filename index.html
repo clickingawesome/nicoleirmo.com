@@ -17,6 +17,7 @@
 <meta name="twitter:image" content="https://nicoleirmo.com/og.png">
 <meta name="author" content="Nicole Irmo">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNmZmYiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4yMSw1Ni41MCkgc2NhbGUoMC4wNTAxKSI+PGcgdHJhbnNmb3JtPSJzY2FsZSgxLC0xKSI+PHBhdGggZD0iTTM2IDBWMjk5VjUyOEgxNzNWMzEzSDE4MVExODcgMzkxIDIwNy4wIDQ0MS41UTIyNyA0OTIgMjY0LjAgNTE3LjBRMzAxIDU0MiAzNTggNTQyUTQ0NCA1NDIgNDg3LjUgNDg1LjBRNTMxIDQyOCA1MzEgMzE1VjBIMzY5VjI5NFEzNjkgMzQ4IDM1Mi41IDM3NS4wUTMzNiA0MDIgMzAwIDQwMlEyNzAgNDAyIDI0Ny4wIDM4MS4wUTIyNCAzNjAgMjExLjAgMzEzLjBRMTk4IDI2NiAxOTggMTg3VjBaIiBmaWxsPSIjMDAwIi8+PHBhdGggdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTMyLDApIiBkPSJNMzYgMFY1MjhIMTk4VjBaIiBmaWxsPSIjMDAwIi8+PC9nPjxjaXJjbGUgY3g9IjY0OSIgY3k9Ii04MDciIHI9IjE3MCIgZmlsbD0iI0YyNDA4RiIvPjwvZz48L3N2Zz4=" type="image/svg+xml">
 <link rel="canonical" href="https://nicoleirmo.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nicole Irmo">
@@ -93,11 +94,13 @@ html:not(.js) .loader,.loaded .loader{display:none}
 .nav.hidden{transform:translateY(-110%)}
 .nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
 .nav .me{text-decoration:none;display:flex;align-items:center}
-.nav .sig{height:54px;width:auto;display:block;transition:opacity .3s}
+.nav .sig{height:46px;width:auto;display:block;transition:opacity .3s}
 .nav .me:hover .sig{opacity:.7}
-body.dark .nav .sig,:root[data-theme="dark"] .nav .sig{filter:invert(1)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .nav .sig{filter:invert(1)}}
-@media (max-width:760px){.nav .sig{height:42px}}
+.sig-dark{display:none!important}
+body.dark .sig-dark,:root[data-theme="dark"] .sig-dark{display:block!important}
+body.dark .sig-light,:root[data-theme="dark"] .sig-light{display:none!important}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sig-dark{display:block!important}:root:not([data-theme="light"]) .sig-light{display:none!important}}
+@media (max-width:760px){.nav .sig{height:38px}}
 .nav .me i{width:10px;height:10px;background:#fff;border-radius:50%;display:inline-block}
 .nav ul{display:flex;gap:clamp(14px,2.4vw,36px);list-style:none;margin:0;padding:0;align-items:center}
 .nav ul a{text-decoration:none;font-weight:600;font-size:.95rem;position:relative;padding:6px 0}
@@ -656,9 +659,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 @media (max-width:820px){.how .serv{grid-template-columns:1fr}}
 .foot-nav{border-top:1.5px solid var(--rule);margin-top:clamp(40px,6vw,80px);padding-top:clamp(28px,4vw,48px);display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:clamp(20px,3vw,48px);font-size:.92rem}
 .foot-brand{max-width:36ch}
-.foot-sig{height:60px;width:auto;display:block;margin-bottom:16px}
-body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .foot-sig{filter:invert(1)}}
+.foot-sig{height:64px;width:auto;display:block;margin-bottom:16px}
 .foot-tag{margin:0 0 14px;color:var(--muted);line-height:1.5}
 .foot-contact{margin:0 0 14px;line-height:1.6}.foot-contact a{text-decoration:none;font-weight:600}.foot-contact a:hover{color:var(--red-ink)}
 .foot-social{margin:0;display:flex;gap:10px}.foot-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1.5px solid var(--rule);border-radius:50%;color:var(--fg);transition:background .25s,color .25s,border-color .25s}.foot-social a:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
@@ -733,7 +734,7 @@ body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="me" href="#/" aria-label="Nicole Irmo, home"><img decoding="async" class="sig" src="/assets/2b37d5ccaaeb.png" alt="Nicole Irmo" data-img="signature" width="900" height="382"></a>
+    <a class="me" href="#/" aria-label="Nicole Irmo, home"><img decoding="async" class="sig sig-light" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIwIC0xMDA3IDgyOSAxMDM3IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik5pY29sZSBJcm1vIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEsLTEpIj48cGF0aCBkPSJNMzYgMFYyOTlWNTI4SDE3M1YzMTNIMTgxUTE4NyAzOTEgMjA3LjAgNDQxLjVRMjI3IDQ5MiAyNjQuMCA1MTcuMFEzMDEgNTQyIDM1OCA1NDJRNDQ0IDU0MiA0ODcuNSA0ODUuMFE1MzEgNDI4IDUzMSAzMTVWMEgzNjlWMjk0UTM2OSAzNDggMzUyLjUgMzc1LjBRMzM2IDQwMiAzMDAgNDAyUTI3MCA0MDIgMjQ3LjAgMzgxLjBRMjI0IDM2MCAyMTEuMCAzMTMuMFExOTggMjY2IDE5OCAxODdWMFoiIGZpbGw9IiMwMDAiLz48cGF0aCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzIsMCkiIGQ9Ik0zNiAwVjUyOEgxOThWMFoiIGZpbGw9IiMwMDAiLz48L2c+PGNpcmNsZSBjeD0iNjQ5IiBjeT0iLTgwNyIgcj0iMTcwIiBmaWxsPSIjRjI0MDhGIi8+PC9zdmc+" alt="Nicole Irmo" width="740" height="1037"><img decoding="async" class="sig sig-dark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIwIC0xMDA3IDgyOSAxMDM3IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik5pY29sZSBJcm1vIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEsLTEpIj48cGF0aCBkPSJNMzYgMFYyOTlWNTI4SDE3M1YzMTNIMTgxUTE4NyAzOTEgMjA3LjAgNDQxLjVRMjI3IDQ5MiAyNjQuMCA1MTcuMFEzMDEgNTQyIDM1OCA1NDJRNDQ0IDU0MiA0ODcuNSA0ODUuMFE1MzEgNDI4IDUzMSAzMTVWMEgzNjlWMjk0UTM2OSAzNDggMzUyLjUgMzc1LjBRMzM2IDQwMiAzMDAgNDAyUTI3MCA0MDIgMjQ3LjAgMzgxLjBRMjI0IDM2MCAyMTEuMCAzMTMuMFExOTggMjY2IDE5OCAxODdWMFoiIGZpbGw9IiNmZmYiLz48cGF0aCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzIsMCkiIGQ9Ik0zNiAwVjUyOEgxOThWMFoiIGZpbGw9IiNmZmYiLz48L2c+PGNpcmNsZSBjeD0iNjQ5IiBjeT0iLTgwNyIgcj0iMTcwIiBmaWxsPSIjRjI0MDhGIi8+PC9zdmc+" alt="" aria-hidden="true" width="740" height="1037"></a>
     <nav aria-label="Primary"><ul>
       <li class="has-mega" id="megaWork"><a href="#/work" data-route="work">Work</a>
         <div class="mega" role="group" aria-label="Work">
@@ -1216,7 +1217,7 @@ body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
 <div class="wrap">
   <div class="foot-nav">
     <div class="foot-brand">
-      <a href="#/" aria-label="Nicole Irmo, home"><img decoding="async" class="foot-sig" src="/assets/2b37d5ccaaeb.png" alt="Nicole Irmo" data-img="signature" width="900" height="382"></a>
+      <a href="#/" aria-label="Nicole Irmo, home"><img decoding="async" class="foot-sig sig-light" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIwIC0xMDA3IDgyOSAxMDM3IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik5pY29sZSBJcm1vIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEsLTEpIj48cGF0aCBkPSJNMzYgMFYyOTlWNTI4SDE3M1YzMTNIMTgxUTE4NyAzOTEgMjA3LjAgNDQxLjVRMjI3IDQ5MiAyNjQuMCA1MTcuMFEzMDEgNTQyIDM1OCA1NDJRNDQ0IDU0MiA0ODcuNSA0ODUuMFE1MzEgNDI4IDUzMSAzMTVWMEgzNjlWMjk0UTM2OSAzNDggMzUyLjUgMzc1LjBRMzM2IDQwMiAzMDAgNDAyUTI3MCA0MDIgMjQ3LjAgMzgxLjBRMjI0IDM2MCAyMTEuMCAzMTMuMFExOTggMjY2IDE5OCAxODdWMFoiIGZpbGw9IiMwMDAiLz48cGF0aCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzIsMCkiIGQ9Ik0zNiAwVjUyOEgxOThWMFoiIGZpbGw9IiMwMDAiLz48L2c+PGNpcmNsZSBjeD0iNjQ5IiBjeT0iLTgwNyIgcj0iMTcwIiBmaWxsPSIjRjI0MDhGIi8+PC9zdmc+" alt="Nicole Irmo" width="740" height="1037"><img decoding="async" class="foot-sig sig-dark" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIwIC0xMDA3IDgyOSAxMDM3IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Ik5pY29sZSBJcm1vIj48ZyB0cmFuc2Zvcm09InNjYWxlKDEsLTEpIj48cGF0aCBkPSJNMzYgMFYyOTlWNTI4SDE3M1YzMTNIMTgxUTE4NyAzOTEgMjA3LjAgNDQxLjVRMjI3IDQ5MiAyNjQuMCA1MTcuMFEzMDEgNTQyIDM1OCA1NDJRNDQ0IDU0MiA0ODcuNSA0ODUuMFE1MzEgNDI4IDUzMSAzMTVWMEgzNjlWMjk0UTM2OSAzNDggMzUyLjUgMzc1LjBRMzM2IDQwMiAzMDAgNDAyUTI3MCA0MDIgMjQ3LjAgMzgxLjBRMjI0IDM2MCAyMTEuMCAzMTMuMFExOTggMjY2IDE5OCAxODdWMFoiIGZpbGw9IiNmZmYiLz48cGF0aCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MzIsMCkiIGQ9Ik0zNiAwVjUyOEgxOThWMFoiIGZpbGw9IiNmZmYiLz48L2c+PGNpcmNsZSBjeD0iNjQ5IiBjeT0iLTgwNyIgcj0iMTcwIiBmaWxsPSIjRjI0MDhGIi8+PC9zdmc+" alt="" aria-hidden="true" width="740" height="1037"></a>
       <p class="foot-tag" data-bind="hero.tagline">Marketing executive who turns brand positioning into commercial results, and builds the teams that sustain it.</p>
       <p class="foot-contact"><a href="mailto:nicole.irmo@gmail.com">nicole.irmo@gmail.com</a><br><span data-bind="hero.location">Barrington, Illinois</span></p>
       <p class="foot-social"><a href="https://www.linkedin.com/in/nicoleirmo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ico" viewBox="0 0 24 24" width="22" height="22"><path d="M4 9h4v11H4z"/><circle cx="6" cy="5" r="2"/><path d="M11 9h4v2a4 4 0 0 1 7 2.5V20h-4v-6a2 2 0 0 0-4 0v6h-3z"/></svg></a><a href="mailto:nicole.irmo@gmail.com" aria-label="Email"><svg class="ico" viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a></p>
@@ -1570,7 +1571,7 @@ body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
     contact:[['ask','Small line'],['title','Headline'],['intro','Intro','area'],['email','Email'],['linkedin','LinkedIn URL']],
     rec:[['quote','Quote','area'],['name','Name'],['title','Title'],['rel','Relationship']],
     post:[['title','Title'],['slug','Slug (URL)'],['tag','Tag'],['date','Date (YYYY-MM-DD)'],['min','Minutes to read','num'],['dek','Summary','area'],['body','Body','body'],['cover','Cover image','img'],['draft','Draft label','bool']],
-    images:[['portrait','Your photo (hero and About page)','img'],['signature','Signature (navigation)','img'],['cardBrand','Story sells: Brand image','img'],['cardTeam','Story sells: Team image','img'],['cardGrowth','Story sells: Growth image','img'],['megaFeat','Menu featured image','img'],['typewriter','Typewriter image','img']],
+    images:[['portrait','Your photo (hero and About page)','img'],['cardBrand','Story sells: Brand image','img'],['cardTeam','Story sells: Team image','img'],['cardGrowth','Story sells: Growth image','img'],['megaFeat','Menu featured image','img'],['typewriter','Typewriter image','img']],
     kase:[['title','Title (shown when opened)'],['cardTitle','Card title (optional, anonymized)'],['id','ID (URL)'],['sector','Employer / client (shown when opened)'],['anon','Card label (anonymized)'],['tags','Tags (comma separated)','list'],['metric','Headline metric'],['mlabel','Metric label'],['context','Context','area'],['did','What I did (one per line)','lines'],['results','Results (one per line: value | label)','pairs'],['tools','Tools (comma separated)','list'],['awards','Recognition (one per line)','lines'],['gallery','Creative images','gallery'],['media.caption','Before/after caption'],['media.beforeLabel','Before label'],['media.afterLabel','After label'],['media.before','Before image (top of page)','img'],['media.after','After image (top of page)','img'],['media.beforeFull','Before, full page (optional)','img'],['media.afterFull','After, full page (optional)','img'],['hot','Highlight in pink','bool'],['home','Show on home page','bool']]
   };
   var TABS=[['hero','Hero'],['images','Photos & images'],['story','Story sells'],['manifesto','Manifesto'],['quote','Big quote'],['recs','Recommendations'],['posts','Insights'],['author','Author'],['cases','Work'],['contact','Contact'],['tools','Publish']];
