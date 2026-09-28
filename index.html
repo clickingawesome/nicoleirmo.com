@@ -123,9 +123,9 @@ body.dark .nav .sig,:root[data-theme="dark"] .nav .sig{filter:invert(1)}
 .btn.mag,a.btn,button.btn{display:inline-flex;align-items:center;justify-content:center}
 
 /* hero */
-.hero{height:100svh;min-height:0;box-sizing:border-box;display:grid;align-content:space-between;grid-template-columns:1fr minmax(240px,28vw);grid-template-rows:auto minmax(0,1fr);gap:clamp(12px,2vw,32px) clamp(20px,3vw,48px);align-items:end;padding-top:calc(76px + env(safe-area-inset-top,0px));padding-bottom:clamp(20px,3vw,40px);position:relative;isolation:isolate}
+.hero{height:100svh;min-height:0;box-sizing:border-box;display:grid;align-content:stretch;grid-template-columns:1fr minmax(240px,30vw);grid-template-rows:auto minmax(0,1fr);gap:clamp(12px,2vw,32px) clamp(20px,3vw,48px);align-items:end;padding-top:calc(76px + env(safe-area-inset-top,0px));padding-bottom:clamp(20px,3vw,40px);position:relative;isolation:isolate}
 .hero .t{padding-bottom:clamp(8px,1vw,16px)}
-.hero h1{margin:0;font-size:clamp(4.5rem,19vw,22rem);letter-spacing:-.005em;line-height:.84;grid-column:1 / -1;align-self:start;padding-top:clamp(10px,3vh,40px);font-variation-settings:"opsz" 96,"wdth" 86;font-weight:800;-webkit-text-stroke:.01em currentColor;paint-order:stroke fill}
+.hero h1{margin:0;font-size:clamp(4.5rem,19vw,22rem);letter-spacing:-.005em;line-height:.84;grid-column:1;align-self:start;padding-top:clamp(10px,3vh,40px);font-variation-settings:"opsz" 96,"wdth" 86;font-weight:800;-webkit-text-stroke:.01em currentColor;paint-order:stroke fill}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
 .hero h1 .ln > span{display:inline-block}
 .hero h1 .dotr{color:var(--red)}
@@ -135,7 +135,7 @@ body.dark .nav .sig,:root[data-theme="dark"] .nav .sig{filter:invert(1)}
 .hero .role .focus{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--fg);margin-top:10px}
 .hero .role .focus i{width:8px;height:8px;border-radius:50%;background:var(--red)}
 .hero .sub p{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2.1vh,1.7rem);line-height:1.25;max-width:34ch;color:var(--fg)}
-.frame{position:relative;aspect-ratio:3/4;height:100%;max-height:100%;width:auto;max-width:100%;justify-self:end;align-self:end;border:2px solid var(--red);border-radius:12px;overflow:hidden;background:var(--soft);transform-style:preserve-3d;will-change:transform}
+.frame{position:relative;aspect-ratio:3/4;grid-column:2;grid-row:1 / 3;height:100%;max-height:100%;width:auto;max-width:100%;justify-self:end;align-self:stretch;border:2px solid var(--red);border-radius:12px;overflow:hidden;background:var(--soft);transform-style:preserve-3d;will-change:transform}
 .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:scale(1.02)}
 .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.25),transparent 45%)}
 .frame .tag{position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;font-size:.9rem;font-weight:600;display:flex;align-items:center;gap:8px}
@@ -145,7 +145,7 @@ body.dark .nav .sig,:root[data-theme="dark"] .nav .sig{filter:invert(1)}
 .scroll-cue i{display:block;width:60px;height:1.5px;background:var(--rule);position:relative;overflow:hidden}
 .scroll-cue i::after{content:"";position:absolute;inset:0;background:var(--red);animation:cue 2s cubic-bezier(.6,0,.2,1) infinite}
 @keyframes cue{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
-@media (max-width:860px){.hero{height:auto;min-height:100svh;grid-template-columns:1fr;grid-template-rows:auto;align-items:start;padding-top:calc(90px + env(safe-area-inset-top,0px))}.frame{justify-self:start;height:auto;max-height:52vh;width:min(100%,340px)}.frame{max-width:320px;aspect-ratio:4/5}.scroll-cue{display:none}}
+@media (max-width:860px){.hero{height:auto;min-height:100svh;grid-template-columns:1fr;grid-template-rows:auto;align-items:start;padding-top:calc(90px + env(safe-area-inset-top,0px))}.frame{grid-column:1;grid-row:auto;justify-self:start;height:auto;max-height:52vh;width:min(100%,340px)}.frame{max-width:320px;aspect-ratio:4/5}.scroll-cue{display:none}}
 
 /* manifesto */
 .manifesto{padding:clamp(100px,16vw,240px) 0 clamp(40px,6vw,80px);position:relative}
@@ -416,17 +416,19 @@ body.dark .hero-bg video,:root[data-theme="dark"] .hero-bg video{mix-blend-mode:
 /* ===== VERSION E ADDITIONS ===== */
 /* Story sells band */
 .approach{padding:0}
-.story-band{background:var(--red);color:#000;padding:clamp(72px,10vw,150px) 0 clamp(64px,9vw,130px);margin-bottom:clamp(48px,7vw,100px)}
-.story-band .disp{font-size:clamp(3rem,9vw,8rem);margin:0 0 clamp(24px,4vw,48px)}
+.story-band{background:var(--red);color:#000;padding:clamp(72px,10vw,150px) 0 clamp(72px,10vw,150px);margin-bottom:clamp(48px,7vw,100px)}
+.story-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,110px);align-items:stretch}
+.story-left{display:flex;flex-direction:column}
+.story-band .disp{font-size:clamp(3.4rem,8vw,7.5rem);margin:0 0 clamp(20px,3vw,36px)}
 .story-band .red{color:#fff}
-.story-lead{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3vw,2.6rem);line-height:1.2;max-width:26ch;margin:0 0 clamp(28px,4vw,56px)}
-.story-callout{font-variation-settings:"opsz" 96,"wdth" 82;font-weight:800;letter-spacing:-.03em;font-size:clamp(2.4rem,6.5vw,5.6rem);line-height:.95;margin:0 0 clamp(24px,4vw,48px)}
+.story-lead{font-family:var(--serif);font-style:italic;font-size:clamp(1.35rem,2.2vw,2rem);line-height:1.25;max-width:24ch;margin:0}
+.story-sign{margin:auto 0 0;padding-top:clamp(28px,4vw,56px);font-weight:800;font-size:clamp(1.15rem,1.8vw,1.6rem);letter-spacing:-.02em;font-variation-settings:"opsz" 96,"wdth" 85}
+.story-callout{font-variation-settings:"opsz" 96,"wdth" 82;font-weight:800;letter-spacing:-.03em;font-size:clamp(2.2rem,5.2vw,4.8rem);line-height:.98;margin:0 0 clamp(24px,3vw,40px);max-width:14ch}
 .story-callout b{background:#000;color:var(--red);padding:.02em .18em;border-radius:.12em;font-weight:800}
-.story-body{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,64px);max-width:100ch}
-.story-body p{margin:0;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.55}
-.story-sign{margin:clamp(32px,5vw,64px) 0 0;font-weight:800;font-size:clamp(1.3rem,2.4vw,2rem);letter-spacing:-.02em;font-variation-settings:"opsz" 96,"wdth" 85}
+.story-body{display:grid;gap:18px;max-width:62ch}
+.story-body p{margin:0;font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.6}
 body.dark .story-band{color:#000}
-@media (max-width:760px){.story-body{grid-template-columns:1fr}}
+@media (max-width:860px){.story-grid{grid-template-columns:1fr}.story-sign{margin-top:0;padding-top:20px}}
 
 /* signature vs static work cards */
 .wcard.sig{background:#000;color:#fff;border-color:#000;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
@@ -796,15 +798,19 @@ body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
 
   <section class="approach" id="approach" aria-labelledby="ap-h">
     <div class="story-band" data-bind-scope="story">
-      <div class="wrap">
-        <h2 class="disp" id="ap-h"><span class="ln mask"><span><span data-bind="story.title">Story sells</span><span class="red">.</span></span></span></h2>
-        <p class="story-lead rv">Every brand already has a good story. Most just bury it under jargon, fine print and stock photos.</p>
-        <p class="story-callout rv">Great marketing is <b>truth x hope</b>.</p>
-        <div class="story-body rv">
-          <p>The truth about what a product really does, and the hope of what life looks like with it, bundled into a story people can connect to.</p>
-          <p>My passion is finding that story and figuring out where it should be told and who should tell it. Sometimes that's a TV spot. Sometimes it's a customer brave enough to share their own. Then I build the team and systems that keep telling it.</p>
+      <div class="wrap story-grid">
+        <div class="story-left">
+          <h2 class="disp" id="ap-h"><span class="ln mask"><span><span data-bind="story.title">Story sells</span><span class="red">.</span></span></span></h2>
+          <p class="story-lead rv">Every brand already has a good story. Most just bury it under jargon, fine print and stock photos.</p>
+          <p class="story-sign rv">Uncover the brand. Build the team. Hit the gas.</p>
         </div>
-        <p class="story-sign rv">Uncover the brand. Build the team. Hit the gas.</p>
+        <div class="story-right">
+          <p class="story-callout rv">Great marketing is <b>truth x hope</b>.</p>
+          <div class="story-body rv">
+            <p>The truth about what a product really does, and the hope of what life looks like with it, bundled into a story people can connect to.</p>
+            <p>My passion is finding that story and figuring out where it should be told and who should tell it. Sometimes that's a TV spot. Sometimes it's a customer brave enough to share their own. Then I build the team and systems that keep telling it.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="wrap">
@@ -1248,9 +1254,9 @@ body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
 
 
   /* fit the hero name to the available width */
-  function fitName(){var h=document.getElementById('h1');if(!h)return;var host=h.closest('.hero');var cs=getComputedStyle(host);var avail=host.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+  function fitName(){var h=document.getElementById('h1');if(!h)return;var host=h.closest('.hero');var cs=getComputedStyle(host);var avail=innerWidth>860?h.clientWidth:(host.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight));
     var lines=h.querySelectorAll('.ln>span');var size=100;h.style.fontSize=size+'px';var w=0;lines.forEach(function(l){w=Math.max(w,l.getBoundingClientRect().width)});
-    var target=Math.floor(size*avail/w*0.985);var cap=Math.floor(innerHeight*(innerWidth>860?0.27:0.2));h.style.fontSize=Math.max(52,Math.min(target,cap,Math.round(innerWidth*0.26)))+'px'}
+    var target=Math.floor(size*avail/w*0.985);var cap=Math.floor(innerHeight*(innerWidth>860?0.3:0.2));h.style.fontSize=Math.max(52,Math.min(target,cap,Math.round(innerWidth*0.26)))+'px'}
   addEventListener('resize',function(){clearTimeout(window.__fn);window.__fn=setTimeout(fitName,120)});
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitName);
   /* ---------- theme ---------- */
