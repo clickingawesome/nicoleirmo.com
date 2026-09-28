@@ -123,19 +123,19 @@ body.dark .nav .sig,:root[data-theme="dark"] .nav .sig{filter:invert(1)}
 .btn.mag,a.btn,button.btn{display:inline-flex;align-items:center;justify-content:center}
 
 /* hero */
-.hero{min-height:100svh;display:grid;align-content:space-between;grid-template-columns:1fr minmax(260px,30vw);grid-template-rows:auto 1fr;gap:clamp(12px,2vw,32px) clamp(20px,3vw,48px);align-items:end;padding-top:calc(76px + env(safe-area-inset-top,0px));padding-bottom:clamp(20px,3vw,40px);position:relative;isolation:isolate}
+.hero{height:100svh;min-height:0;box-sizing:border-box;display:grid;align-content:space-between;grid-template-columns:1fr minmax(240px,28vw);grid-template-rows:auto minmax(0,1fr);gap:clamp(12px,2vw,32px) clamp(20px,3vw,48px);align-items:end;padding-top:calc(76px + env(safe-area-inset-top,0px));padding-bottom:clamp(20px,3vw,40px);position:relative;isolation:isolate}
 .hero .t{padding-bottom:clamp(8px,1vw,16px)}
 .hero h1{margin:0;font-size:clamp(4.5rem,19vw,22rem);letter-spacing:-.005em;line-height:.84;grid-column:1 / -1;align-self:start;padding-top:clamp(10px,3vh,40px);font-variation-settings:"opsz" 96,"wdth" 86;font-weight:800;-webkit-text-stroke:.01em currentColor;paint-order:stroke fill}
 .hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
 .hero h1 .ln > span{display:inline-block}
 .hero h1 .dotr{color:var(--red)}
 .hero .sub{display:block;margin-top:0;padding-top:16px;border-top:1.5px solid var(--rule)}
-.hero .role{font-size:clamp(2.4rem,4vw,3.6rem);font-weight:800;line-height:1;letter-spacing:-.02em;margin:0 0 12px}
+.hero .role{font-size:clamp(2rem,3.4vh,3.2rem);font-weight:800;line-height:1;letter-spacing:-.02em;margin:0 0 12px}
 .hero .role small{display:block;font-weight:500;color:var(--muted);font-size:.95rem;margin-top:6px}
 .hero .role .focus{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--fg);margin-top:10px}
 .hero .role .focus i{width:8px;height:8px;border-radius:50%;background:var(--red)}
-.hero .sub p{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.2vw,2rem);line-height:1.25;max-width:34ch;color:var(--fg)}
-.frame{position:relative;aspect-ratio:3/4;max-height:44vh;justify-self:end;width:100%;border:2px solid var(--red);border-radius:12px;overflow:hidden;background:var(--soft);transform-style:preserve-3d;will-change:transform}
+.hero .sub p{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2.1vh,1.7rem);line-height:1.25;max-width:34ch;color:var(--fg)}
+.frame{position:relative;aspect-ratio:3/4;height:100%;max-height:100%;width:auto;max-width:100%;justify-self:end;align-self:end;border:2px solid var(--red);border-radius:12px;overflow:hidden;background:var(--soft);transform-style:preserve-3d;will-change:transform}
 .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:scale(1.02)}
 .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.25),transparent 45%)}
 .frame .tag{position:absolute;left:18px;bottom:16px;z-index:2;color:#fff;font-size:.9rem;font-weight:600;display:flex;align-items:center;gap:8px}
@@ -145,7 +145,7 @@ body.dark .nav .sig,:root[data-theme="dark"] .nav .sig{filter:invert(1)}
 .scroll-cue i{display:block;width:60px;height:1.5px;background:var(--rule);position:relative;overflow:hidden}
 .scroll-cue i::after{content:"";position:absolute;inset:0;background:var(--red);animation:cue 2s cubic-bezier(.6,0,.2,1) infinite}
 @keyframes cue{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
-@media (max-width:860px){.hero{grid-template-columns:1fr;grid-template-rows:auto;align-items:start;padding-top:calc(90px + env(safe-area-inset-top,0px))}.frame{justify-self:start;max-height:none}.frame{max-width:320px;aspect-ratio:4/5}.scroll-cue{display:none}}
+@media (max-width:860px){.hero{height:auto;min-height:100svh;grid-template-columns:1fr;grid-template-rows:auto;align-items:start;padding-top:calc(90px + env(safe-area-inset-top,0px))}.frame{justify-self:start;height:auto;max-height:52vh;width:min(100%,340px)}.frame{max-width:320px;aspect-ratio:4/5}.scroll-cue{display:none}}
 
 /* manifesto */
 .manifesto{padding:clamp(100px,16vw,240px) 0 clamp(40px,6vw,80px);position:relative}
@@ -786,7 +786,7 @@ body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
       <div class="sub">
         <p class="rv" data-bind="hero.tagline">Marketing executive who turns brand positioning into commercial results, and builds the teams that sustain it.</p>
       </div>
-      <p class="rv" style="margin:18px 0 0;display:flex;gap:12px;flex-wrap:wrap"><a class="btn solid mag" href="#/work" data-bind="hero.btn1">See the work</a><a class="btn mag" href="#/contact" data-bind="hero.btn2">Start a conversation</a></p>
+      <p class="rv" style="margin:14px 0 0;display:flex;gap:12px;flex-wrap:wrap"><a class="btn solid mag" href="#/work" data-bind="hero.btn1">See the work</a><a class="btn mag" href="#/contact" data-bind="hero.btn2">Start a conversation</a></p>
     </div>
     <figure class="frame rv" id="frame" data-tilt>
       <img decoding="async" src="/assets/e84f9ac41ef5.webp" alt="Portrait of Nicole Irmo" width="800" height="800" id="frameImg" data-img="portrait">
@@ -1250,7 +1250,7 @@ body.dark .foot-sig,:root[data-theme="dark"] .foot-sig{filter:invert(1)}
   /* fit the hero name to the available width */
   function fitName(){var h=document.getElementById('h1');if(!h)return;var host=h.closest('.hero');var cs=getComputedStyle(host);var avail=host.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
     var lines=h.querySelectorAll('.ln>span');var size=100;h.style.fontSize=size+'px';var w=0;lines.forEach(function(l){w=Math.max(w,l.getBoundingClientRect().width)});
-    var target=Math.floor(size*avail/w*0.985);var cap=Math.floor(innerHeight*0.38);h.style.fontSize=Math.max(56,Math.min(target,cap,Math.round(innerWidth*0.26)))+'px'}
+    var target=Math.floor(size*avail/w*0.985);var cap=Math.floor(innerHeight*(innerWidth>860?0.27:0.2));h.style.fontSize=Math.max(52,Math.min(target,cap,Math.round(innerWidth*0.26)))+'px'}
   addEventListener('resize',function(){clearTimeout(window.__fn);window.__fn=setTimeout(fitName,120)});
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitName);
   /* ---------- theme ---------- */
