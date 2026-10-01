@@ -671,6 +671,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .foot-nav a:hover{color:var(--red-ink)}
 
 /* mobile fixes */
+.hero.tall{height:auto;min-height:100svh}
 .foot-nav .foot-social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1.5px solid var(--rule);border-radius:50%}
 .foot-nav .foot-social a svg{display:block;width:20px;height:20px}
 @media (max-width:860px){
@@ -1268,7 +1269,12 @@ button,input,select,textarea{font:inherit;color:inherit}
   /* fit the hero name to the available width */
   function fitName(){var h=document.getElementById('h1');if(!h)return;var host=h.closest('.hero');var cs=getComputedStyle(host);var avail=innerWidth>860?h.clientWidth:(host.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight));
     var lines=h.querySelectorAll('.ln>span');var size=100;h.style.fontSize=size+'px';var w=0;lines.forEach(function(l){w=Math.max(w,l.getBoundingClientRect().width)});
-    var target=Math.floor(size*avail/w*0.985);var cap=Math.floor(innerHeight*(innerWidth>860?0.3:0.2));h.style.fontSize=Math.max(52,Math.min(target,cap,Math.round(innerWidth*0.26)))+'px'}
+    var target=Math.floor(size*avail/w*0.985);var cap=Math.floor(innerHeight*(innerWidth>860?0.3:0.2));var fs=Math.max(40,Math.min(target,cap,Math.round(innerWidth*0.26)));
+    /* desktop: the name must leave room for the text block below it, so nothing overlaps on short screens */
+    if(innerWidth>860){var t=host.querySelector('.t');var gap=parseFloat(cs.rowGap)||24;var room=host.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom)-(t?t.scrollHeight:0)-gap;var byHeight=Math.floor(room/1.78);if(byHeight<fs)fs=Math.max(40,byHeight)}
+    h.style.fontSize=fs+'px';
+    if(innerWidth>860){var tt=host.querySelector('.t');host.classList.toggle('tall',!!tt&&h.getBoundingClientRect().bottom>tt.getBoundingClientRect().top-4)}}
+
   addEventListener('resize',function(){clearTimeout(window.__fn);window.__fn=setTimeout(fitName,120)});
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitName);
   /* ---------- theme ---------- */
