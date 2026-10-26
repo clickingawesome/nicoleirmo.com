@@ -1,8 +1,9 @@
-# merged and static case studies
+# mirrors _redirects (Netlify uses _redirects; this is for Apache hosts)
+Redirect 301 /cv /resume/
 Redirect 301 /work/hero-club/ /work/community/
+Redirect 301 /work/marketplace/ /work/brand-platform/
 Redirect 301 /work/hotel-launch/ /work/
 Redirect 301 /work/direct-mail/ /work/
-Redirect 301 /work/marketplace/ /work/brand-platform/
 Redirect 301 /work/small-business/ /work/
 Redirect 301 /work/replatform/ /work/
 Redirect 301 /work/owned-channels/ /work/
@@ -14,10 +15,10 @@ Redirect 301 /work/focus-hospitality/ /work/
 Redirect 301 /work/integration/ /work/
 Redirect 301 /work/foodservice/ /work/
 Redirect 301 /insights/amazon-is-a-shelf/ /insights/
-Redirect 301 /insights/ai-on-a-small-marketing-team/ /insights/
-Redirect 301 /insights/inheriting-a-replatform/ /insights/
-Redirect 301 /insights/tv-for-a-dtc-brand/ /insights/
-Redirect 301 /insights/owned-channels-pay/ /insights/
-Redirect 301 /insights/double-digit-again/ /insights/
-Redirect 301 /insights/marketing-a-category-nobody-talks-about/ /insights/
-Redirect 301 /insights/hire-for-the-puzzle/ /insights/
+Redirect 302 /insights/ai-on-a-small-marketing-team/ /insights/
+Redirect 302 /insights/inheriting-a-replatform/ /insights/
+Redirect 302 /insights/tv-for-a-dtc-brand/ /insights/
+Redirect 302 /insights/owned-channels-pay/ /insights/
+Redirect 302 /insights/double-digit-again/ /insights/
+Redirect 302 /insights/marketing-a-category-nobody-talks-about/ /insights/
+Redirect 302 /insights/hire-for-the-puzzle/ /insights/

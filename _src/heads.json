@@ -1,0 +1,122 @@
+{
+ "/": {
+  "title": "Nicole Irmo · Marketing Leader",
+  "desc": "Nicole Irmo, marketing leader. Marketing executive who turns great stories into real revenue, and builds the teams that keep it growing.",
+  "canonical": "https://nicoleirmo.com/",
+  "ogtype": "website",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Person\",\"@id\":\"https://nicoleirmo.com/#person\",\"name\":\"Nicole Irmo\",\"jobTitle\":\"Marketing Leader\",\"description\":\"Marketing executive who turns great stories into real revenue, and builds the teams that keep it growing.\",\"url\":\"https://nicoleirmo.com/\",\"sameAs\":[\"https://www.linkedin.com/in/nicoleirmo/\"],\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Barrington\",\"addressRegion\":\"IL\",\"addressCountry\":\"US\"},\"knowsAbout\":[\"Brand strategy\",\"Storytelling\",\"Ecommerce\",\"Generative engine optimization\",\"Marketing leadership\",\"Team building\"]},{\"@type\":\"WebSite\",\"@id\":\"https://nicoleirmo.com/#website\",\"url\":\"https://nicoleirmo.com/\",\"name\":\"Nicole Irmo\",\"author\":{\"@id\":\"https://nicoleirmo.com/#person\"},\"inLanguage\":\"en-US\"}]}"
+  ]
+ },
+ "/work/": {
+  "title": "Work · Nicole Irmo",
+  "desc": "Thirteen wins. Four full stories. Pick a card, any card.",
+  "canonical": "https://nicoleirmo.com/work/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"CollectionPage\", \"name\": \"Work · Nicole Irmo\", \"url\": \"https://nicoleirmo.com/work/\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"hasPart\": [{\"@type\": \"Article\", \"headline\": \"Rebuilt a 20-year-old product catalog as a real brand\", \"url\": \"https://nicoleirmo.com/work/brand-platform/\"}, {\"@type\": \"Article\", \"headline\": \"Became the most-cited brand in the category across AI search\", \"url\": \"https://nicoleirmo.com/work/ai-search/\"}, {\"@type\": \"Article\", \"headline\": \"Built a marketing function from website support up\", \"url\": \"https://nicoleirmo.com/work/team/\"}, {\"@type\": \"Article\", \"headline\": \"Built community in a category where customers rarely speak up\", \"url\": \"https://nicoleirmo.com/work/community/\"}]}"
+  ]
+ },
+ "/work/community/": {
+  "title": "Built community in a category where customers rarely speak up · Nicole Irmo",
+  "desc": "500 customer stories captured · +144% engagement · 4.47% monthly follower growth. Social media was outsourced, and the brand had no advocates or customer cont",
+  "canonical": "https://nicoleirmo.com/work/community/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"Built community in a category where customers rarely speak up\", \"description\": \"Social media was outsourced, and the brand had no advocates or customer content in a category where people rarely talk about their experience in public.\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/work/community/\", \"keywords\": \"Community, Social, Content\", \"about\": \"NorthShore Care Supply\"}"
+  ]
+ },
+ "/work/team/": {
+  "title": "Built a marketing function from website support up · Nicole Irmo",
+  "desc": "7 of 9 team members hired, three promoted, one voluntary departure in three and a half years. I inherited website support, no shared marketing plan and a smal",
+  "canonical": "https://nicoleirmo.com/work/team/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"Built a marketing function from website support up\", \"description\": \"I inherited website support, no shared marketing plan and a small team still finding its footing after a leadership change.\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/work/team/\", \"keywords\": \"Team, Leadership\", \"about\": \"NorthShore Care Supply\"}"
+  ]
+ },
+ "/work/ai-search/": {
+  "title": "Became the most-cited brand in the category across AI search · Nicole Irmo",
+  "desc": "1,291 citations versus 986 for the nearest competitor. AI assistants were starting to change how customers found products in the category, and nobody had a pl",
+  "canonical": "https://nicoleirmo.com/work/ai-search/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"Became the most-cited brand in the category across AI search\", \"description\": \"AI assistants were starting to change how customers found products in the category, and nobody had a playbook for showing up in their answers.\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/work/ai-search/\", \"keywords\": \"Search, GEO\", \"about\": \"NorthShore Care Supply\"}"
+  ]
+ },
+ "/work/brand-platform/": {
+  "title": "Rebuilt a 20-year-old product catalog as a real brand · Nicole Irmo",
+  "desc": "+32% organic search, against an industry decline of 2.5% · 15.3% blog conversion, up from 3.1%. A 20-year-old online product catalog with website support, but",
+  "canonical": "https://nicoleirmo.com/work/brand-platform/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"Rebuilt a 20-year-old product catalog as a real brand\", \"description\": \"A 20-year-old online product catalog with website support, but no real marketing function, no brand voice and no messaging architecture.\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/work/brand-platform/\", \"keywords\": \"Brand, Content\", \"about\": \"NorthShore Care Supply\"}"
+  ]
+ },
+ "/about/": {
+  "title": "About Nicole Irmo · Marketing Leader",
+  "desc": "Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old produc",
+  "canonical": "https://nicoleirmo.com/about/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"ProfilePage\", \"mainEntity\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}}"
+  ]
+ },
+ "/insights/": {
+  "title": "Insights · Nicole Irmo",
+  "desc": "Thought leadership on brand, teams and growth, from Nicole Irmo.",
+  "canonical": "https://nicoleirmo.com/insights/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/og.png",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Blog\", \"name\": \"Insights · Nicole Irmo\", \"url\": \"https://nicoleirmo.com/insights/\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"blogPost\": [{\"@type\": \"BlogPosting\", \"headline\": \"In AI search, the most-cited brand wins. Here's how we became it.\", \"url\": \"https://nicoleirmo.com/insights/most-cited-brand-wins/\", \"datePublished\": \"2026-09-10\"}, {\"@type\": \"BlogPosting\", \"headline\": \"Seven of nine: building a marketing team that stays\", \"url\": \"https://nicoleirmo.com/insights/hire-seven-of-nine/\", \"datePublished\": \"2026-08-27\"}, {\"@type\": \"BlogPosting\", \"headline\": \"Story sells: turning a 20-year-old product marketplace into a brand\", \"url\": \"https://nicoleirmo.com/insights/story-sells/\", \"datePublished\": \"2026-08-12\"}, {\"@type\": \"BlogPosting\", \"headline\": \"Building community in a category where customers rarely speak up\", \"url\": \"https://nicoleirmo.com/insights/community-where-nobody-talks/\", \"datePublished\": \"2026-05-28\"}]}"
+  ]
+ },
+ "/insights/hire-seven-of-nine/": {
+  "title": "Seven of nine: building a marketing team that stays · Nicole Irmo",
+  "desc": "One voluntary departure in three and a half years isn't luck. It's a few unglamorous decisions, made on purpose.",
+  "canonical": "https://nicoleirmo.com/insights/hire-seven-of-nine/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/assets/43a156728bbf.webp",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"Seven of nine: building a marketing team that stays\", \"description\": \"One voluntary departure in three and a half years isn't luck. It's a few unglamorous decisions, made on purpose.\", \"datePublished\": \"2026-08-27\", \"dateModified\": \"2026-09-27\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/insights/hire-seven-of-nine/\", \"keywords\": \"Team\", \"image\": \"https://nicoleirmo.com/assets/43a156728bbf.webp\"}"
+  ]
+ },
+ "/insights/community-where-nobody-talks/": {
+  "title": "Building community in a category where customers rarely speak up · Nicole Irmo",
+  "desc": "Most brands won't even say \"adult diapers.\" We found more than 500 customers willing to share their stories anyway.",
+  "canonical": "https://nicoleirmo.com/insights/community-where-nobody-talks/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/assets/f41f55f3832d.webp",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"Building community in a category where customers rarely speak up\", \"description\": \"Most brands won't even say \\\"adult diapers.\\\" We found more than 500 customers willing to share their stories anyway.\", \"datePublished\": \"2026-05-28\", \"dateModified\": \"2026-09-27\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/insights/community-where-nobody-talks/\", \"keywords\": \"Community\", \"image\": \"https://nicoleirmo.com/assets/f41f55f3832d.webp\"}"
+  ]
+ },
+ "/insights/most-cited-brand-wins/": {
+  "title": "In AI search, the most-cited brand wins. Here's how we became it. · Nicole Irmo",
+  "desc": "Rankings measure where you show up. Citations measure whether you're the answer. That difference decided our category.",
+  "canonical": "https://nicoleirmo.com/insights/most-cited-brand-wins/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/assets/65529b5d8583.webp",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"In AI search, the most-cited brand wins. Here's how we became it.\", \"description\": \"Rankings measure where you show up. Citations measure whether you're the answer. That difference decided our category.\", \"datePublished\": \"2026-09-10\", \"dateModified\": \"2026-09-27\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/insights/most-cited-brand-wins/\", \"keywords\": \"Search\", \"image\": \"https://nicoleirmo.com/assets/65529b5d8583.webp\"}"
+  ]
+ },
+ "/insights/story-sells/": {
+  "title": "Story sells: turning a 20-year-old product marketplace into a brand · Nicole Irmo",
+  "desc": "Twenty years in business, twenty years online and no story anyone could repeat. Here's how a marketplace became a brand.",
+  "canonical": "https://nicoleirmo.com/insights/story-sells/",
+  "ogtype": "article",
+  "ogimage": "https://nicoleirmo.com/assets/9f4ae5c7c377.webp",
+  "ld": [
+   "{\"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"Story sells: turning a 20-year-old product marketplace into a brand\", \"description\": \"Twenty years in business, twenty years online and no story anyone could repeat. Here's how a marketplace became a brand.\", \"datePublished\": \"2026-08-12\", \"dateModified\": \"2026-09-27\", \"author\": {\"@type\": \"Person\", \"@id\": \"https://nicoleirmo.com/#person\", \"name\": \"Nicole Irmo\", \"jobTitle\": \"Marketing Leader\", \"url\": \"https://nicoleirmo.com/about/\", \"sameAs\": [\"https://www.linkedin.com/in/nicoleirmo/\"], \"image\": \"https://nicoleirmo.com/assets/e84f9ac41ef5.webp\", \"description\": \"Nicole Irmo is a branding nerd who leads marketing and ecommerce for a direct-to-consumer medical supply brand, where she repositioned a 20-year-old product catalog into a brand platform and built the team that sustains it. She previously ran an independent consultancy and led marketing for hospitality and healthcare product brands. She likes complicated categories, and her aim in every role is to leave marketing better than she found it.\", \"address\": {\"@type\": \"PostalAddress\", \"addressLocality\": \"Barrington\", \"addressRegion\": \"IL\", \"addressCountry\": \"US\"}}, \"publisher\": {\"@type\": \"Person\", \"name\": \"Nicole Irmo\", \"url\": \"https://nicoleirmo.com\"}, \"mainEntityOfPage\": \"https://nicoleirmo.com/insights/story-sells/\", \"keywords\": \"Brand\", \"image\": \"https://nicoleirmo.com/assets/9f4ae5c7c377.webp\"}"
+  ]
+ }
+}

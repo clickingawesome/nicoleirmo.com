@@ -1,9 +1,31 @@
-/resume /resume/ 301
-/cv /resume/ 301
-/results /#/results 301
-/contact /#/contact 301
-/work/hero-club/* /work/community/ 301
-/work/hotel-launch/* /work/focus-hospitality/ 301
-/work/direct-mail/* /work/focus-hospitality/ 301
-/work/marketplace/* /work/brand-platform/ 301
-/work/small-business/* /work/mortgage/ 301
+# build sources are not public
+/_src/*  /404.html  404!
+
+# resume shortcuts
+/cv            /resume/  301
+
+# merged or retired case studies
+/work/hero-club/*          /work/community/       301
+/work/marketplace/*        /work/brand-platform/  301
+/work/hotel-launch/*       /work/  301
+/work/direct-mail/*        /work/  301
+/work/small-business/*     /work/  301
+/work/replatform/*         /work/  301
+/work/owned-channels/*     /work/  301
+/work/broadcast/*          /work/  301
+/work/mortgage/*           /work/  301
+/work/print-program/*      /work/  301
+/work/brochure/*           /work/  301
+/work/focus-hospitality/*  /work/  301
+/work/integration/*        /work/  301
+/work/foodservice/*        /work/  301
+
+# retired or draft articles
+/insights/amazon-is-a-shelf/*                       /insights/  301
+/insights/ai-on-a-small-marketing-team/*            /insights/  302
+/insights/inheriting-a-replatform/*                 /insights/  302
+/insights/tv-for-a-dtc-brand/*                      /insights/  302
+/insights/owned-channels-pay/*                      /insights/  302
+/insights/double-digit-again/*                      /insights/  302
+/insights/marketing-a-category-nobody-talks-about/* /insights/  302
+/insights/hire-for-the-puzzle/*                     /insights/  302

@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://nicoleirmo.com/</loc><lastmod>2026-09-25</lastmod><priority>1.0</priority></url><url><loc>https://nicoleirmo.com/resume/</loc><lastmod>2026-09-25</lastmod><priority>0.6</priority></url><url><loc>https://nicoleirmo.com/work/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url><url><loc>https://nicoleirmo.com/insights/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url><url><loc>https://nicoleirmo.com/about/</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/insights/most-cited-brand-wins/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/insights/hire-seven-of-nine/</loc><lastmod>2026-08-27</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/insights/story-sells/</loc><lastmod>2026-08-12</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/insights/community-where-nobody-talks/</loc><lastmod>2026-05-28</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/work/brand-platform/</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/work/ai-search/</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/work/team/</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url><url><loc>https://nicoleirmo.com/work/community/</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url></urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://nicoleirmo.com/</loc><lastmod>2026-10-26</lastmod><priority>1.0</priority></url>
+<url><loc>https://nicoleirmo.com/resume/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/work/</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://nicoleirmo.com/results/</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://nicoleirmo.com/about/</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://nicoleirmo.com/insights/</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority></url>
+<url><loc>https://nicoleirmo.com/contact/</loc><lastmod>2026-10-26</lastmod><priority>0.6</priority></url>
+<url><loc>https://nicoleirmo.com/insights/most-cited-brand-wins/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/insights/hire-seven-of-nine/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/insights/story-sells/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/insights/community-where-nobody-talks/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/work/brand-platform/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/work/ai-search/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/work/team/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://nicoleirmo.com/work/community/</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+</urlset>
